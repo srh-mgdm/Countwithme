@@ -1,4 +1,5 @@
 import styles from '../styles/Home.module.css';
+import Image from 'next/image';
 import { useState } from 'react';
 
 function Home() {
@@ -6,9 +7,7 @@ function Home() {
   return (
     <>
      <div className={styles.main}>
-       <h1 className={styles.title}>
-         count with me
-       </h1>
+       <Image className={styles.logo} src="/logo.png" alt="Logo" width={400} height={200} /> 
        <div className={styles.buttonContainer}>
          <button onClick={() => setCount(count + 1)} className={styles.buttonPlus}>+</button>
          <span className={styles.count}>{count}</span>
